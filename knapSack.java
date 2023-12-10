@@ -10,7 +10,7 @@ public class knapSack {
         table[i][0]=i;
         table[i][1]=value[i]/(double)weight[i];
      }
-        Arrays.sort(table, Comparator.comparingDouble(o->o[1]));
+        Arrays.sort(table, Comparator.comparingDouble(o->o[1])); // nabla function
         for(int i=weight.length-1;i>=0;i--){
             int idx=(int) table[i][0];
             if(capacity >=weight[idx]){
