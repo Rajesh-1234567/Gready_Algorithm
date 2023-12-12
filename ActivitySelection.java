@@ -7,6 +7,7 @@ public class activitySelection {
             table[i][1]=start[i];
             table[i][2]= end[i];
         }
+        
     //Lambda function ->shortest (It sort the matrix according to column number given)
         Arrays.sort(table, Comparator.comparingDouble(o->o[2]));
         int countMyAct=1,lastEnd=table[0][2];
@@ -21,6 +22,7 @@ public class activitySelection {
         }
         return countMyAct;
     }
+    
     public static int activitySelectionWhenSortedEndGiven(int start[],int end[]){
         int countMyAct=1,lastEnd=end[0];
         ArrayList<Integer> ans= new ArrayList<>();
@@ -33,6 +35,7 @@ public class activitySelection {
         }
         return countMyAct;
     }
+    
     public static void main(String []args){
         int []start={1,3,0,5,8,5};
         int []end={2,4,6,7,9,9};
